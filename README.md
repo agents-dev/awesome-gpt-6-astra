@@ -709,3 +709,21 @@ Please [report broken links or incorrect information](https://github.com/MartinD
 ## License
 
 Original curated text and artwork in this repository are dedicated to the public domain under [CC0 1.0](LICENSE). Linked games, code, images, trademarks, and other third-party materials retain their own licenses and rights. Listing a project does not change its permissions.
+
+<!-- omgithub:readme:start -->
+## 🚀 Build, play, and remix with OMGithub
+
+**Remixed using [OMGithub.com](https://omgithub.com).**
+
+[![OMGithub](https://img.shields.io/badge/OMGithub-Open%20project-orange?style=for-the-badge)](https://omgithub.com/agents-dev/awesome-gpt-6-astra)
+[![GitHub](https://img.shields.io/badge/GitHub-Source-181717?logo=github&style=for-the-badge)](https://github.com/agents-dev/awesome-gpt-6-astra)
+
+- 🎮 [Open the project](https://omgithub.com/agents-dev/awesome-gpt-6-astra).
+- ✨ [Remix this project](https://omgithub.com/?remix=agents-dev%2Fawesome-gpt-6-astra).
+- 💻 [Explore the source](https://github.com/agents-dev/awesome-gpt-6-astra).
+- 🛠️ [Check build runs](https://github.com/agents-dev/awesome-gpt-6-astra/actions).
+- 🐛 [Report an issue](https://github.com/agents-dev/awesome-gpt-6-astra/issues).
+- 👤 [Explore the creator's projects](https://omgithub.com/agents-dev).
+- 🌍 [Create with OMGithub](https://omgithub.com).
+- 🧬 [Explore the remix source](https://github.com/MartinDelophy/awesome-gpt-6-astra/tree/e4633d9809c2051011319e5ac9b41bf050e04c15).
+<!-- omgithub:readme:end -->
