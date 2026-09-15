@@ -18,8 +18,8 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 const clamp = THREE.MathUtils.clamp;
 const lerp = THREE.MathUtils.lerp;
 const scene = new THREE.Scene();
-scene.background = new THREE.Color(0x83bed8);
-scene.fog = new THREE.FogExp2(0x9bcadb, 0.00030);
+scene.background = new THREE.Color(0xffe600);
+scene.fog = new THREE.FogExp2(0xffe600, 0.00030);
 
 const camera = new THREE.PerspectiveCamera(68, innerWidth/innerHeight, 0.1, 9000);
 const mobileDevice=isHandheldDevice();
@@ -519,7 +519,7 @@ document.querySelector('.kart-options').innerHTML=craftDefs.map((d,i)=>`<button 
 document.querySelectorAll('[data-craft]').forEach(el=>el.addEventListener('click',()=>setCraft(Number(el.dataset.craft))));
 const beforeBayDecor=new Set(scene.children);
 // A soft sky gradient, sculpted islands and trackside props give the course a readable scale.
-const sky=new THREE.Mesh(new THREE.SphereGeometry(6500,24,16),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,vertexShader:`varying vec3 vP;void main(){vP=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,fragmentShader:`varying vec3 vP;void main(){float h=normalize(vP).y;vec3 c=mix(vec3(.68,.83,.86),vec3(.16,.43,.64),smoothstep(-.05,.8,h));gl_FragColor=vec4(c,1.);}`}));scene.add(sky);
+const sky=new THREE.Mesh(new THREE.SphereGeometry(6500,24,16),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,vertexShader:`varying vec3 vP;void main(){vP=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}`,fragmentShader:`varying vec3 vP;void main(){float h=normalize(vP).y;vec3 c=mix(vec3(1.,.95,.6),vec3(1.,.84,0.),smoothstep(-.05,.8,h));gl_FragColor=vec4(c,1.);}`}));scene.add(sky);
 const grass=new THREE.MeshStandardMaterial({color:0x7fa98b,roughness:.95});
 const cliff=new THREE.MeshStandardMaterial({color:0x9eaeaa,roughness:.94,flatShading:true});
 const leaves=new THREE.MeshStandardMaterial({color:0x4a9077,roughness:.9});
@@ -568,7 +568,7 @@ function selectScene(name){
  if(ancient&&!citadel){citadel=createCitadel(trackFrame,trackLength);scene.add(citadel);}
  if(citadel)citadel.visible=ancient;
  [...bayTrackObjects,...bayDecor,sea].forEach(o=>o.visible=!ancient);
- scene.background.set(ancient?0xc9baa0:0x83bed8);scene.fog.color.set(ancient?0xc9baa0:0x9bcadb);
+  scene.background.set(ancient?0xffe600:0xffe600);scene.fog.color.set(ancient?0xffe600:0xffe600);
  dir.color.set(ancient?0xffd49b:0xffe6c3);
  trackMat.uniforms.citadel.value=ancient?1:0;
  document.body.dataset.scene=selectedScene;
